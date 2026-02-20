@@ -15,3 +15,25 @@ classDiagram
     }
 
 ```
+
+Ejercicio 2.
+
+```mermaid
+
+classDiagram
+    class Persona {
+        +String nombre
+        +String dni
+    }
+
+    class Estudiante {
+        +String numeroExpediente
+        +double notaMedia
+    }
+
+    Persona <|-- Estudiante
+
+```
+
+
+
