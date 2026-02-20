@@ -107,29 +107,30 @@ Ejercicio 6
 ```mermaid
 
 classDiagram
+    
+    class Usuario {
+    +String nombre
+    +int numCarnet
+    }
+
     class Recurso {
-        -int id
-        -String titulo
-        +prestar()
-        +devolver()
+    -int id
+    -String titulo
+    +prestar()
+    +devolver()
     }
 
     class Libro {
-        +String isbn
+    +String isbn
     }
 
     class Revista {
-        +int numeroEdicion
-    }
-
-    class Usuario {
-        +String nombre
-        +int numCarnet
+    +int numeroEdicion
     }
 
     Recurso <|-- Libro
     Recurso <|-- Revista
-
     Usuario "1" -- "0--*" Recursos prestados
+ 
 
 ```
