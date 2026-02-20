@@ -85,11 +85,11 @@ classDiagram
     }
 
     class Tarjeta {
-        +procesar(double importe)
+        
     }
 
     class Paypal {
-        +procesar(double importe)
+        
     }
 
     class Carrito {
@@ -99,5 +99,37 @@ classDiagram
     MetodoPago <|.. Tarjeta
     MetodoPago <|.. Paypal
     Carrito ..> MetodoPago : usa
+
+```
+
+Ejercicio 6
+
+```mermaid
+
+classDiagram
+    class Recurso {
+        -int id
+        -String titulo
+        +prestar()
+        +devolver()
+    }
+
+    class Libro {
+        +String isbn
+    }
+
+    class Revista {
+        +int numeroEdicion
+    }
+
+    class Usuario {
+        +String nombre
+        +int numCarnet
+    }
+
+    Recurso <|-- Libro
+    Recurso <|-- Revista
+
+    Usuario "1" -- "0--*" Recursos prestados
 
 ```
