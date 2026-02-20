@@ -130,7 +130,7 @@ classDiagram
 
     Recurso <|-- Libro
     Recurso <|-- Revista
-    Usuario "1" -- "0--*" Recursos prestados
+    Usuario "1" -- "0--*" Recursos : prestados
  
 
 ```
