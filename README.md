@@ -58,3 +58,20 @@ classDiagram
 
 ```
 
+```mermaid
+
+classDiagram
+    class CentroComercial {
+        +String nombre
+        +String direccion
+    }
+
+    class Tienda {
+        +String nombre
+        +String tipo
+    }
+
+    CentroComercial "1" -- "1..*" Tienda
+
+```
+
