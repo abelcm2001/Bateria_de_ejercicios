@@ -58,7 +58,10 @@ classDiagram
 
 ```
 
+Ejercicio 4
+
 ```mermaid
+
 
 classDiagram
     class CentroComercial {
