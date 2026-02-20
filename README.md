@@ -41,16 +41,15 @@ Ejercicio 3.
 
 classDiagram
     class Computadora {
-        +String marca
-        +String modelo
+       
     }
 
     class PlacaBase {
-        +String chipset
+   
     }
 
     class Raton {
-        +String tipo
+    
     }
 
     Computadora *-- PlacaBase : composición
@@ -65,16 +64,40 @@ Ejercicio 4
 
 classDiagram
     class CentroComercial {
-        +String nombre
-        +String direccion
+       
     }
 
     class Tienda {
-        +String nombre
-        +String tipo
+        
     }
 
     CentroComercial "1" -- "1..*" Tienda
 
 ```
+Ejercicio 5
 
+```mermaid
+
+classDiagram
+    class MetodoPago {
+        <<interface>>
+        +procesar(double importe)
+    }
+
+    class Tarjeta {
+        +procesar(double importe)
+    }
+
+    class Paypal {
+        +procesar(double importe)
+    }
+
+    class Carrito {
+        +pagar(MetodoPago miMetodo)
+    }
+
+    MetodoPago <|.. Tarjeta
+    MetodoPago <|.. Paypal
+    Carrito ..> MetodoPago : usa
+
+```
