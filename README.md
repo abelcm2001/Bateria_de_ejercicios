@@ -35,5 +35,26 @@ classDiagram
 
 ```
 
+Ejercicio 3.
 
+```mermaid
+
+classDiagram
+    class Computadora {
+        +String marca
+        +String modelo
+    }
+
+    class PlacaBase {
+        +String chipset
+    }
+
+    class Raton {
+        +String tipo
+    }
+
+    Computadora *-- PlacaBase : composición
+    Computadora o-- Raton : agregación
+
+```
 
